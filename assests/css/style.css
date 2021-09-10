@@ -168,7 +168,7 @@
 
 .slide-move{
      width: 300%;
-     transition: all 0.25s ease 0s;
+     
 }
 
 .slide-move__item{
@@ -177,7 +177,6 @@
 
 .slide-move__item.active{
     display: block;
-    animation: Slider linear 0.4s;
 }
 
 .slide-move__item-img{
