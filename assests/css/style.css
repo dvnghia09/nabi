@@ -168,6 +168,16 @@
 
 .slide-move{
      width: 300%;
+     transition: all 0.25s ease 0s;
+}
+
+.slide-move__item{
+    display: none;
+}
+
+.slide-move__item.active{
+    display: block;
+    animation: Slider linear 0.4s;
 }
 
 .slide-move__item-img{
@@ -176,12 +186,22 @@
      
 }
 
-@keyframes Slider {
+@keyframes SliderTT {
     from{
-        transform: translateX(1000px);
+        transform: translateX(-50vw);
     }
     to{
-        transform: translateX(0px);
+        transform: translateX(0vw);
+        
+    }
+}
+
+@keyframes Slider {
+    from{
+        transform: translateX(50vw);
+    }
+    to{
+        transform: translateX(0vw);
         
     }
 }
