@@ -21,21 +21,22 @@ html{
     line-height: 1.6rem;
 }
 
-.grid{
-    width: 100%;
-    padding: 0 40px;
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .grid__row{
     display: flex;
     flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
+    margin-left: -25px;
+    margin-right: -25px;
     
 }
 
 .grid__column-4{
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
     width: 25%;
 }
