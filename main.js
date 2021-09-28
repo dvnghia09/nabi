@@ -9,7 +9,6 @@ const widthSlide = $('.slide').clientWidth;
 const slideMove =  $('.slide-move')
 const maxSlide = widthSlide*2
 
-console.log(maxSlide)
 var up = 0
 
 
