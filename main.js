@@ -35,7 +35,8 @@ function Up (){
         }
     })
 
-    $('.slide-move__item.active').style.animation = `Slider ease 0.2s`
+    $('.slide-move__item.active').style.animation = `Slider linear 0.2s`
+    
 }
 
 function Back (){
@@ -60,19 +61,30 @@ function Back (){
             slides[0].classList.add('active')
         }
     })
-    $('.slide-move__item.active').style.animation = `SliderTT ease 0.2s`
+    $('.slide-move__item.active').style.animation = `SliderTT linear 0.2s`
+    
     
 }
 
 // Sau 3s chuển slide
-setInterval(function(){
-    Up ()
-},4000)
+let setTime;
+const startInterval = () => {
+    
+    setTime = setInterval(function(){
+        Up ()
+    },5000)
+}
+
+startInterval();
 
 slideUp.onclick = function(){
     Up ()
+    clearInterval(setTime)
+    setTimeout(startInterval(), 5000)
 }
 
 slideBack.onclick = function(){
     Back ()
+    clearInterval(setTime)
+    setTimeout(startInterval(), 5000)
 }

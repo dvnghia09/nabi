@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assests/css/style.css">
     <link rel="stylesheet" href="./assests/css/base.css">
+    <link rel="stylesheet" href="./assests/css/grid.css">
+    <link rel="stylesheet" href="./assests/css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assests/font/themify-icons/themify-icons.css">
     
@@ -23,7 +25,7 @@
                         <h2 class="header-logo__link-title">Nabi</h2>
                     </a>
                </div>
-               <div class="header-menu">
+               <div class="header-menu  hide-on-mobile-table">
                    <ul class="header-menu-list">
                        <li class="header-menu__item">
                            <a href="#" class="header-menu__item-link">Siêu sale tháng 9</a>
@@ -88,8 +90,8 @@
                    </ul>
 
                </div>
-               <div class="header-right">
-                    <div class="header-search">
+               <div class="header-right ">
+                    <div class="header-search hide-on-mobile-table">
                         <div class="header-search__form" action="">
                         <input class="header-search__form-input" type="text" placeholder="Tìm kiếm...">
                         <span class="header-search__form-btn">
@@ -97,11 +99,14 @@
                         </span>
                         </div>
                     </div>
-                    <div class="header-buy">
-                    <div class="header-user">
+                    <div class="header-function">
+                    <div class="header-function-sub header-function-search">
+                        <i class="ti-search"></i>
+                    </div>    
+                    <div class="header-function-sub">
                         <a href="" class="header-user__link" title="Đăng nhập" ><i class="ti-user"></i></a>
                     </div>
-                    <div class="header-cart">
+                    <div class="header-function-sub">
                        <a href="" class="header-user__link" title="Giỏ hàng"><i class="ti-shopping-cart"></i></a> 
                     </div>
                     </div>
@@ -136,7 +141,7 @@
              </div>
 
              <div class="products">
-                <div class="grid">
+                <div class="grid wide">
                     <div class="product-new">
                           <div class="product-heading">
                              <h2 class="product-heading__title">SẢN PHẨM MỚI</h2>
@@ -664,7 +669,7 @@
              </div>
         </div>
         <div class="contact">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row">
                     <div class="grid__column-4 contact-item_padding">
                         <div class="contact-item">
@@ -708,7 +713,7 @@
         
         
         <footer class="footer">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row">
                     <div class="grid__column-4">
                          <div class="footer__content">
@@ -808,7 +813,7 @@
 
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     header.classList.add('white-color')
     btntop.style.display = "flex";
   } else {

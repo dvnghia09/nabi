@@ -1,5 +1,5 @@
 .header{
-   height: 80px;
+   height: var(--header-height);
    background-color: #ffffff66;
    position: fixed;
    top: 0;
@@ -12,7 +12,7 @@
 }
 
 .header:hover{
-    background-color: #fff;
+    background-color:var(--White-color);
     box-shadow: 0 0 10px rgb(0 0 0 / 20%);
     
 }
@@ -20,7 +20,7 @@
 
 
 .white-color{
-    background-color: #fff;
+    background-color: var(--White-color);
     animation:fadeIn linear 0.4s ;
     box-shadow: 0 0 10px rgb(0 0 0 / 20%);
 
@@ -66,6 +66,11 @@
     
 }
 
+.header-menu__item:hover{
+    border-bottom: 3px solid #000;
+    
+}
+
 .header-menu__item:hover .header-menu__child{
     display: block;
 }
@@ -75,7 +80,7 @@
     border-radius: 0 0 2px 2px;
     width: 150px;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 3px);
     left: 50%;
     transform: translate(-50%,0);
     list-style: none;
@@ -133,31 +138,38 @@
     color: var(--text-color);
 }
 
-.header-buy{
+.header-function{
     display: flex;
     font-size: 1.6rem;
+    margin-left: 20px;
     
+}
+
+.header-function-sub.header-function-search{
+    display: none;
 }
 
 .header-user__link{
     color: var(--text-color);
+    text-decoration: none;
 }
 
-.header-user{
-    margin-right: 10px;
-    margin-left: 30px;
-    
-}
-
-.header-user:hover,
-.header-cart:hover{
+.header-function-sub:hover{
     opacity: 0.6;
 }
 
-.header-cart{
-    padding-left: 10px;
-    border-left: 1px solid var(--border-color);
+.header-function-sub{
+    padding: 0 8px;
+    position: relative;
+    border-right:2px solid #ccc ;
 }
+
+.header-function-sub:last-child{
+    padding-right: 0;
+    border: none;
+}
+
+
 
 /* Slider */
 
@@ -174,17 +186,18 @@
 
 .slide-move__item.active{
     display: block;
+
 }
 
 .slide-move__item-img{
     float: left;
     width: 100%;
-     
 }
 
 @keyframes SliderTT {
     from{
         transform: translateX(-50vw);
+        
     }
     to{
         transform: translateX(0vw);
@@ -410,6 +423,8 @@
     border-radius: 50%;
 }
 
+/* Footer */
+
 .footer-form{
     position: relative;
 }
@@ -477,6 +492,7 @@
     cursor: pointer;
     align-items: center;
     transform: rotate(-90deg);
+    display: none;
 }
 
 .btntop-title{

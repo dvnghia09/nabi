@@ -1,0 +1,39 @@
+/* Mobile & Table */
+@media (max-width: 1023px) {
+    .hide-on-mobile-table{
+        display: none;
+    }
+
+    .header {
+        background-color: var(--White-color);
+        padding: 0 16px;
+        box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+        height: var(--header-height-mobile-table);
+    }
+
+    .white-color{
+        animation: none;
+    }
+
+    .app__container {
+        margin-top: var(--header-height-mobile-table);
+    }
+    
+    .header-function-sub.header-function-search{
+        display: block;
+    }
+}
+
+/* Table */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-table {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile{
+        display: none;
+    }
+}
