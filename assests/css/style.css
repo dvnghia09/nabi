@@ -17,6 +17,27 @@
     
 }
 
+.header-menu-mobile{
+    line-height: 0;
+}
+
+.header-menu-mobile-icon{
+    font-size: 2.6rem;
+    color: var(--text-color);
+    padding-right: 12px;
+}
+
+.header-menu-mobile-search{
+    font-size: 2rem;
+    padding: 0 12px;
+    border-left: 2px solid #ccc;
+}
+
+.header-left{
+    display: none;
+    align-items: center;
+}
+
 
 
 .white-color{
@@ -45,6 +66,10 @@
     text-decoration: none;
     font-size: 3rem;
     color: var(--Black-color);
+}
+
+.header-logo__link-title{
+    margin: 0;
 }
 
 .header-menu-list{
@@ -142,7 +167,8 @@
     display: flex;
     font-size: 1.6rem;
     margin-left: 20px;
-    
+    width: 84px;
+    justify-content: flex-end;
 }
 
 .header-function-sub.header-function-search{

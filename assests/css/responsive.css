@@ -19,9 +19,15 @@
         margin-top: var(--header-height-mobile-table);
     }
     
-    .header-function-sub.header-function-search{
-        display: block;
+    .header-left{
+        display: flex;
     }
+
+    .header-function{
+        margin-left: 0;
+    }
+
+
 }
 
 /* Table */
@@ -35,5 +41,13 @@
 @media (max-width: 739px) {
     .hide-on-mobile{
         display: none;
+    }
+
+    .product-item{
+        padding: 1px;
+    }
+
+    .product-heading__subtitle{
+        max-width: 250px;
     }
 }
