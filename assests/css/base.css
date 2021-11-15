@@ -22,6 +22,11 @@ html{
     box-sizing: border-box; 
     font-size: 62.5%;
     line-height: 1.6rem;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#app {
+    overflow: hidden;
 }
 
 

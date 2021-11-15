@@ -50,4 +50,13 @@
     .product-heading__subtitle{
         max-width: 250px;
     }
+
+    .products{
+        margin: 0 8px;
+    }
+
+    .product:hover .product-item__btn {
+        display: none;
+    }
+
 }

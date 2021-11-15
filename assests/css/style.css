@@ -47,6 +47,94 @@
 
 }
 
+/* NAV MOBILE AND TABLE */
+
+.nav-mobile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    background-color: var(--White-color);
+    z-index: 10;
+    display: none;
+    animation: navAnimation linear 0.3s;
+}
+
+.nav-close{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+    border-top: 1px solid #ccc ;
+    text-align: center;
+}
+
+i.nav-close-icon {
+    line-height: 40px;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+@keyframes navAnimation {
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to{ 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.nav-mobile-title-sub {
+    font-size: 1.6rem;
+    color: var(--White-color);
+    background-color: #000;
+    margin: 0;
+    line-height: 42px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.nav-mobile-list {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-mobile-item__link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    line-height: 42px;
+    border-bottom: 1px solid #d5d4d4;
+    display: block;
+    color: var(--text-color);
+    padding-left: 16px;
+    font-weight: 500;
+}
+
+.nav-mobile-item__link:hover{
+    opacity: 0.5;
+}
+
+.nav-mobile-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0 ,0.3);
+    z-index: 9;
+    display: none;
+    animation: showUp linear 0.3s;
+}
+
+.active-sub-mobile{
+    display: block;
+}
+
 
 
 @keyframes fadeIn {
@@ -91,10 +179,6 @@
     
 }
 
-.header-menu__item:hover{
-    border-bottom: 3px solid #000;
-    
-}
 
 .header-menu__item:hover .header-menu__child{
     display: block;
@@ -105,13 +189,14 @@
     border-radius: 0 0 2px 2px;
     width: 150px;
     position: absolute;
-    top: calc(100% + 3px);
+    top: 100%;
     left: 50%;
     transform: translate(-50%,0);
     list-style: none;
     padding: 0;
     background-color: var(--White-color);
     box-shadow: 1px 2px 3px rgb(0 0 0 / 20%);
+    border-top: 1px solid var(--text-color);
 }
 
 .header-menu__child-item:hover{
@@ -123,6 +208,8 @@
     color: var(--text-color);
     line-height: 34px;
     display: block;
+    text-align: left;
+    padding-left: 14px;
 }
 
 .header-menu__item-link{

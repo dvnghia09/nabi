@@ -88,3 +88,31 @@ slideBack.onclick = function(){
     clearInterval(setTime)
     setTimeout(startInterval(), 5000)
 }
+
+// show nav mobile and table
+
+const btnMenu = $('.header-menu-mobile')
+const overlay = $('.nav-mobile-overlay')
+const navMobile = $('.nav-mobile')
+const navClose = $('.nav-close')
+
+const handleBtnMenu = () => {
+    btnMenu.onclick = () => {
+        overlay.classList.add('active-sub-mobile')
+        navMobile.classList.add('active-sub-mobile')
+    }
+
+    overlay.onclick = () => {
+        overlay.classList.remove('active-sub-mobile')
+        navMobile.classList.remove('active-sub-mobile')
+    }
+
+    navClose.onclick = () => {
+        overlay.classList.remove('active-sub-mobile')
+        navMobile.classList.remove('active-sub-mobile')
+    }
+
+
+}
+
+handleBtnMenu();
