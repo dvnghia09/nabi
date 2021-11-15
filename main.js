@@ -95,6 +95,9 @@ const btnMenu = $('.header-menu-mobile')
 const overlay = $('.nav-mobile-overlay')
 const navMobile = $('.nav-mobile')
 const navClose = $('.nav-close')
+const showSubNavMobile = $('.nav-mobile__child')
+const navItem = $$('.nav-mobile-item__link')
+
 
 const handleBtnMenu = () => {
     btnMenu.onclick = () => {
@@ -111,6 +114,14 @@ const handleBtnMenu = () => {
         overlay.classList.remove('active-sub-mobile')
         navMobile.classList.remove('active-sub-mobile')
     }
+
+    navItem.forEach( (value,index) => {
+        const val = navItem[index]
+        val.onclick = (e) => {
+            showSubNavMobile.classList.toggle('active-sub-mobile')
+            e.target.classList.toggle('deg')
+        }
+    }) 
 
 
 }
