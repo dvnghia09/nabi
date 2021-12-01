@@ -91,18 +91,25 @@ slideBack.onclick = function(){
 
 // show nav mobile and table
 
-const btnMenu = $('.header-menu-mobile')
+const btnMenu = $('.header-menu-mobile-icon')
 const overlay = $('.nav-mobile-overlay')
 const navMobile = $('.nav-mobile')
 const navClose = $('.nav-close')
 const showSubNavMobile = $('.nav-mobile__child')
 const navItem = $$('.nav-mobile-item__link')
+// hiện ô tìm kiếm trên mobile and table
+const activeBoxSearch = $('.header-menu-mobile-search')
+const boxSearch = $('.box-search')
+const app = $('.app__container')
+
+
 
 
 const handleBtnMenu = () => {
     btnMenu.onclick = () => {
         overlay.classList.add('active-sub-mobile')
         navMobile.classList.add('active-sub-mobile')
+        console.log('ads')
     }
 
     overlay.onclick = () => {
@@ -116,14 +123,27 @@ const handleBtnMenu = () => {
     }
 
     navItem.forEach( (value,index) => {
-        const val = navItem[index]
-        val.onclick = (e) => {
+        value.onclick = (e) => {
             showSubNavMobile.classList.toggle('active-sub-mobile')
             e.target.classList.toggle('deg')
         }
-    }) 
+    })
 
 
+    // show box search
+    
+    app.onclick = () =>{
+        boxSearch.classList.remove('active')
+    }
+
+    activeBoxSearch.onclick = (e) => {
+        boxSearch.classList.add('active')
+        
+    }
+
+    boxSearch.onclick = (e) => {
+        e.stopPropagation()
+    }
 }
 
 handleBtnMenu();

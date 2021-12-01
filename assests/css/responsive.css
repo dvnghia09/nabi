@@ -27,6 +27,14 @@
         margin-left: 0;
     }
 
+    .box-search.active {
+        display: block;
+    }
+
+    .box-search .header-search__form-input{
+        background-color: #fff;
+    }
+
 
 }
 
@@ -34,6 +42,10 @@
 @media (min-width: 740px) and (max-width: 1023px) {
     .hide-on-table {
         display: none;
+    }
+
+    .box-search{
+        width: 400px;
     }
 }
 
