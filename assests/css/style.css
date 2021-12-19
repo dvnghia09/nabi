@@ -222,12 +222,16 @@ i.nav-close-icon {
     display: flex;
     align-items: center;
     text-align: center;
-    margin: 0 9px;
+    padding: 0 8px;
     font-size: 1.4rem;
     font-weight: 700;
     text-transform: uppercase;
     position: relative;
     
+}
+
+.header-menu__item:hover{
+    background-color: #f1f1f1;
 }
 
 
@@ -669,3 +673,4 @@ i.nav-close-icon {
 .Verification{
     width: 60%;
 }
+
